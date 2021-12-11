@@ -16,6 +16,10 @@ declare(strict_types=1);
 /**
  * Metadata version
  */
+
+use D3\SortedMenus\Modules\Controller\Admin\NavigationTreeSortedMenus;
+use OxidEsales\Eshop\Application\Controller\Admin\NavigationTree;
+
 $sMetadataVersion = '2.1';
 
 $sModuleId = 'd3sortedmenus';
@@ -37,7 +41,9 @@ $aModule = [
     'email'       => 'support@shopmodule.com',
     'url'         => 'https://www.oxidmodule.com/',
     'controllers' => [],
-    'extend'      => [],
+    'extend'      => [
+        NavigationTree::class    => NavigationTreeSortedMenus::class
+    ],
     'events'      => [],
     'templates'   => [],
     'settings'    => [],
