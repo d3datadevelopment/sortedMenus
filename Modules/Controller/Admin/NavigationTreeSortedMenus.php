@@ -4,6 +4,7 @@ namespace D3\SortedMenus\Modules\Controller\Admin;
 
 use DOMElement;
 use DOMXPath;
+use OxidEsales\Eshop\Core\Registry;
 
 class NavigationTreeSortedMenus extends NavigationTreeSortedMenus_parent
 {
@@ -19,29 +20,11 @@ class NavigationTreeSortedMenus extends NavigationTreeSortedMenus_parent
 
     public function d3SortMenus()
     {
-        $sorting = [
-            // Tabs
-            [
-                'xpath' => "//OX/*[@id='d3mxd3modules']/*[@id='d3mximporter']/*[@id='d3mxarticleimport']/TAB",
-                'order' => ['d3tbclimporter_category', 'd3tbclimporter_selectlist', 'd3tbclimporter_main']
-            ],
-            // mainmenu
-            [
-                'xpath' => "//OX/*[@id='d3mxd3modules']/MAINMENU",
-                'order' => ['d3konfigurator', 'abcdef', 'd3mxordermanager']
-            ],
-            // mainmenu with unvalid item
-            [
-                'xpath' => "//OX/*[@id='d3mxd4modules']/MAINMENU",
-                'order' => ['d3konfigurator', 'abcdef', 'd3mxordermanager']
-            ],
-            // Tabs
-            [
-                'xpath' => "//OX/*[@id='NAVIGATION_ESHOPADMIN']/*[@id='mxmanageprod']/*[@id='mxcategories']/TAB",
-                'order' => ['tbclcategory_pictures']
-            ]
-            // can't sort buttons
-        ];
+        $sorting = Registry::getConfig()->getConfigParam('d3MenuSorting');
+
+        if (false === is_array($sorting) || false == count($sorting)) {
+            return;
+        }
 
         foreach ($sorting as $sort) {
             $this->d3SortList($this->_oInitialDom, $sort['xpath'], $sort['order']);
