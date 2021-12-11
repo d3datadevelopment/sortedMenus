@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * https://www.d3data.de
+ *
+ * @copyright (C) D3 Data Development (Inh. Thomas Dartsch)
+ * @author    D3 Data Development - Daniel Seifert <info@shopmodule.com>
+ * @link      https://www.oxidmodule.com
+ */
+
+declare(strict_types=1);
+
 namespace D3\SortedMenus\Modules\Controller\Admin;
 
 use DOMElement;
@@ -44,6 +57,7 @@ class NavigationTreeSortedMenus extends NavigationTreeSortedMenus_parent
         $remainingUnsortedElements = [];
         $sortedElements = [];
 
+        // split current elements to "contained in sorted" and all others
         foreach ($unsortedElements as $element) {
             if (in_array($element->getAttribute('id'), $newOrder)) {
                 $sortedElements[$element->getAttribute('id')] = $element;
@@ -61,11 +75,11 @@ class NavigationTreeSortedMenus extends NavigationTreeSortedMenus_parent
         }
         $allSortedElements = array_merge($sortedElements, $remainingUnsortedElements);
 
+        // apply sorted elements
         for ($i = 0; $i < count($allSortedElements); $i++) {
             $keys = array_keys($allSortedElements);
             $elem = $unsortedElements->item($i);
             $searchElem = $elem->parentNode;
-            //$searchElem->removeChild($elem);
             $searchElem->appendChild($allSortedElements[$keys[$i]]);
         }
     }

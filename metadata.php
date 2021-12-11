@@ -13,10 +13,6 @@
 
 declare(strict_types=1);
 
-/**
- * Metadata version
- */
-
 use D3\SortedMenus\Modules\Controller\Admin\NavigationTreeSortedMenus;
 use OxidEsales\Eshop\Application\Controller\Admin\NavigationTree;
 
