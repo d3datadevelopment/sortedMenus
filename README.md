@@ -46,7 +46,7 @@ $this->d3MenuSorting = [
 ];
 ```
 
-Jeder Eintrage definiert mit der xPath-Angabe eine Menüebene, in der sortiert werden kann. Der xPath kann in der jeweiligen menu.xml ermittelt werden. Beschreiben Sie den xPath möglichst genau (idealerweise anhand der eindeutigen Element-IDs), da sonst die zu verschiebenden Elemente im falschen Bereich landen könnten.
+Jeder Eintrage definiert mit der [XPath](https://de.wikipedia.org/wiki/XPath)-Angabe die sortierbaren Elemente im gesamten Menübaum. Der XPath kann in der jeweiligen menu.xml ermittelt werden. Beschreiben Sie den XPath möglichst genau (idealerweise anhand der eindeutigen Element-IDs), da sonst die zu verschiebenden Elemente im falschen Bereich landen könnten.
 
 Im order-Eintrag stehen die IDs der enthaltenen Einträge in der richtigen Reihenfolge. Nicht enthaltene Einträge werden in der bisherigen Sortierung automatisch an das Ende der sortierten Liste angehängt.
 

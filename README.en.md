@@ -46,7 +46,7 @@ $this->d3MenuSorting = [
 ];
 ```
 
-Each entry defines a menu level with the xPath specification in which sorting can take place. The xPath can be determined in the respective menu.xml. Describe the xPath as precisely as possible (ideally using the unique ELement IDs), otherwise the elements to be moved could end up in the wrong area.
+Each entry defines the sortable elements in the entire menu tree with the [XPath](https://en.wikipedia.org/wiki/XPath) specification. The XPath can be determined in the respective menu.xml. Describe the XPath as precisely as possible (ideally using the unique ELement IDs), otherwise the elements to be moved could end up in the wrong area.
 
 In the order entry, the IDs of the contained entries are in the correct order. Entries that are not contained are automatically appended to the end of the sorted list in the previous sort order.
 
