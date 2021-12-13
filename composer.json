@@ -38,6 +38,9 @@
       "target-directory": "d3/sortedmenus"
     }
   },
+  "suggest": {
+    "d3/disableadminelements": "hide menu items in the shop admin panel"
+  },
   "autoload": {
     "psr-4": {
       "D3\\SortedMenus\\": "../../../source/modules/d3/sortedmenus"

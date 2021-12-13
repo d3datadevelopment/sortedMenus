@@ -1,7 +1,7 @@
 [![deutsche Version](https://logos.oxidmodule.com/de2_xs.svg)](README.md)
 [![english version](https://logos.oxidmodule.com/en2_xs.svg)](README.en.md)
 
-# D³ Sortierbare Menüs für OXID eShop
+# D³ Sortierbare Admin Menüs für OXID eShop
 
 Das Modul bietet die Möglichkeit, die Adminmenüs in eine gewünschte Reihenfolge zu bringen. 
 
