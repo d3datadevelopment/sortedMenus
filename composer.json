@@ -27,7 +27,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "oxid-esales/oxideshop-ce": "6.1 - 6.9"
+    "oxid-esales/oxideshop-ce": "6.1 - 6.14"
   },
   "extra": {
     "oxideshop": {
