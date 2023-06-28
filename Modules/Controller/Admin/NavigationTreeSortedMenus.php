@@ -24,7 +24,7 @@ class NavigationTreeSortedMenus extends NavigationTreeSortedMenus_parent
     /**
      * @param $dom
      */
-    public function _addLinks($dom)
+    protected function _addLinks($dom)
     {
         $this->d3SortMenus();
 
